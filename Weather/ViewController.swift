@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import Foundation
 
 class ViewController: UIViewController {
 
     @IBOutlet weak var city: UITextField!
+    
+    @IBOutlet weak var weatherMessage: UILabel!
     
     @IBAction func buttonPressed(sender: AnyObject) {
         
@@ -24,19 +27,44 @@ class ViewController: UIViewController {
             
             var urlContent = NSString(data: data, encoding: NSUTF8StringEncoding)
             
-            var contentArray = urlContent!.componentsSeparatedByString("<span class=\"phrase\">")
             
-            var newContentArray = contentArray[1].componentsSeparatedByString("</span>")
+            let tempUrlContent : String = urlContent as String
             
-            self.weatherMessage.text = newContentArray[0] as? String
+//            if (tempUrlContent.bridgeToObjectiveC().containsString("<span class=\"phrase\">") {
+            
+                var contentArray = urlContent!.componentsSeparatedByString("<span class=\"phrase\">")
+            
+                var newContentArray = contentArray[1].componentsSeparatedByString("</span>")
+            
+            
+                var weatherForecast = newContentArray[0].stringByReplacingOccurrencesOfString("&deg;", withString: "º") as String
+            
+            
+                dispatch_async(dispatch_get_main_queue()) {
+            
+                    self.weatherMessage.text = weatherForecast
+            
+                }
+            
+            
+//            } else {
+//            
+//            
+//                dispatch_async(dispath_get_main_queue()) {
+//            
+//                    self.weatherMessage.text = "We couldn't find that city. Please try again."
+//            
+//                }
+//            
+//            }
             
         }
+        
+    
         
         task.resume()
         
     }
-    
-    @IBOutlet weak var weatherMessage: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -17,11 +17,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pRf-NB-Un9">
-                                <rect key="frame" x="100" y="306" width="400" height="200"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pRf-NB-Un9">
+                                <rect key="frame" x="113" y="276" width="375" height="190"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="400" id="Zne-3Q-zpZ"/>
-                                    <constraint firstAttribute="height" constant="200" id="mdk-AN-xac"/>
+                                    <constraint firstAttribute="width" constant="375" id="Zne-3Q-zpZ"/>
+                                    <constraint firstAttribute="height" constant="190" id="mdk-AN-xac"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="18"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -68,7 +68,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="pRf-NB-Un9" firstAttribute="top" secondItem="8dV-lO-TnF" secondAttribute="bottom" constant="40" id="6cx-uU-UdS"/>
+                            <constraint firstItem="pRf-NB-Un9" firstAttribute="top" secondItem="8dV-lO-TnF" secondAttribute="bottom" constant="10" id="6cx-uU-UdS"/>
                             <constraint firstItem="8dV-lO-TnF" firstAttribute="top" secondItem="ViP-v3-H9v" secondAttribute="bottom" constant="40" id="FCh-UU-HQH"/>
                             <constraint firstAttribute="centerX" secondItem="ViP-v3-H9v" secondAttribute="centerX" id="Heg-n9-IWp"/>
                             <constraint firstItem="8xw-1M-f5d" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="50" id="OSP-C2-FOf"/>
@@ -84,11 +84,12 @@
                     </view>
                     <connections>
                         <outlet property="city" destination="ViP-v3-H9v" id="AkH-cJ-nP8"/>
-                        <outlet property="weatherMessage" destination="pRf-NB-Un9" id="eqV-w8-NTY"/>
+                        <outlet property="weatherMessage" destination="pRf-NB-Un9" id="cc7-Ah-F9v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="350" y="300"/>
         </scene>
     </scenes>
     <resources>
